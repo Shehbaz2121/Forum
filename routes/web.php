@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::get('/threads', [ThreadsController::class, 'index']);
+
+Route::get('/posts', [PostsController::class, 'index']);

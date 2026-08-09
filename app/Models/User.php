@@ -29,4 +29,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function threads()
+    {
+        return $this->hasMany(Threads::class);
+    }
+    public function posts() {
+
+        return $this->hasMany(Posts::class);
+    }
+
+
 }
