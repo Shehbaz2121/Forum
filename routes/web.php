@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::get('/threads', [ThreadsController::class, 'index']);
 
