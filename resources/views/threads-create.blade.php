@@ -9,7 +9,9 @@
     <label>Category:</label>
     <select name="category_id">
         @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
+         <option value="{{ $category->id }}" @if ($category->id == $selectedCategoryId) selected @endif>
+    {{ $category->name }}
+</option>
         @endforeach
     </select>
 

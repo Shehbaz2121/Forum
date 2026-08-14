@@ -15,10 +15,11 @@ class ThreadsController extends Controller
         return view('threads',['threads'=>$threads]);  
 
     }
-    public function create()
+   public function create(Request $request)
     {
     $categories = Category::all();
-    return view('threads-create', ['categories' => $categories]);
+    $selectedCategoryId = $request->query('category_id');
+    return view('threads-create', ['categories' => $categories, 'selectedCategoryId' => $selectedCategoryId]);
  }
 
    public function store(Request $request)
@@ -36,5 +37,5 @@ class ThreadsController extends Controller
     $thread = Threads::find($id);
     return view('thread-show', ['thread' => $thread]);
     }
-
+ 
 }

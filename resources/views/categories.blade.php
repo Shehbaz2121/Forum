@@ -2,6 +2,6 @@
 
 <ul>
     @foreach ($categories as $category)
-        <li>{{ $category->name }} ({{ $category->threads->count() }} threads)</li>
+        <li><a href="/categories/{{ $category->id }}">{{ $category->name }}</a> ({{ $category->threads->count() }} threads)</li>
     @endforeach
 </ul>
