@@ -17,8 +17,9 @@ class Threads extends Model
     }
     public function posts()
     {
-        return $this->hasMany(Posts::class);
+        return $this->hasMany(Posts::class, 'thread_id');
 
     }
     protected $fillable = ['title', 'category_id', 'user_id'];
+    
 }
