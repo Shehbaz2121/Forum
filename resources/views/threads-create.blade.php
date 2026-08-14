@@ -1,3 +1,6 @@
+@extends('layout.app')
+
+@section('content')
 <h1>Create a Thread</h1>
 
 <form action="/threads" method="POST">
@@ -17,3 +20,4 @@
 
     <button type="submit">Create Thread</button>
 </form>
+@endsection

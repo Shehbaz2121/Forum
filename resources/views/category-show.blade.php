@@ -1,3 +1,7 @@
+
+@extends('layout.app')
+
+@section('content')
 <h1>{{ $category->name }}</h1>
 <a href="/categories">← Back to Categories</a>
 <a href="/threads/create?category_id={{ $category->id }}">Create Thread</a>
@@ -6,3 +10,4 @@
         <li><a href="/threads/{{ $thread->id }}">{{ $thread->title }}</a></li>
     @endforeach
 </ul>
+@endsection

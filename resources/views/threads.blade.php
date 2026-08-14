@@ -1,3 +1,7 @@
+
+@extends('layout.app')
+
+@section('content')
 <h1>Threads</h1>
 <a href="/threads/create">Create Thread</a>
 <ul>
@@ -5,3 +9,4 @@
         <li><a href="/threads/{{ $thread->id }}">{{ $thread->title }}</a></li>
     @endforeach
 </ul>
+@endsection
