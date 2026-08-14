@@ -15,4 +15,5 @@ class Posts extends Model
     {
         return $this->belongsTo(User::class);
     }
+    protected $fillable = ['body', 'thread_id', 'user_id'];
 }

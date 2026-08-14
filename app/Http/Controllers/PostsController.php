@@ -14,4 +14,19 @@ class PostsController extends Controller
         return view('posts',['posts'=>$posts]);  
 
     }
+
+    public function create($threadId)
+    {
+        return view('posts-create', ['threadId' => $threadId]);
+    }
+    public function store(Request $request, $threadId)
+{
+    Posts::create([
+        'body' => $request->body,
+        'thread_id' => $threadId,
+        'user_id' => 1,
+    ]);
+
+    return redirect('/threads');
+}
 }

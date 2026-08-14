@@ -14,7 +14,7 @@ Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::get('/threads', [ThreadsController::class, 'index']);
 Route::get('/threads/create', [ThreadsController::class, 'create']);
-
+Route::get('/threads/{id}', [ThreadsController::class, 'show']);
 Route::get('/posts', [PostsController::class, 'index']);
 
 Route::post('/threads', [ThreadsController::class, 'store']);

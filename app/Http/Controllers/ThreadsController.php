@@ -31,5 +31,10 @@ class ThreadsController extends Controller
 
     return redirect('/threads');
 }
+    public function show($id)
+    {
+    $thread = Threads::find($id);
+    return view('thread-show', ['thread' => $thread]);
+    }
 
 }
